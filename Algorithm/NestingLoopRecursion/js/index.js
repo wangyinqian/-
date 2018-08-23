@@ -18,7 +18,7 @@
                 //更改存放父级的数组，保证获取到按钮的直系父级
                 if(u != parents[j].components.length){ u++; }else{ j++; u = 0;  }
                 //如果查找到按钮返回，并停止递归
-                if(e.lightboxBtn == name){ return {component:e,parent:parents[j]}  }
+                if(e.type == name){ return {component:e,parent:parents[j]}  }
             }
             //如果数组中无元素则不再递归
             if(_arrayList.length){ return query(_arrayList,_parents); }
